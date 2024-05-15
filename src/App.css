@@ -1,0 +1,155 @@
+@media(max-width: 700px) {
+ footer {
+    margin-top: 20px; 
+    padding: 60px 0px 60px 0px;
+    height: 200px; 
+  }
+  .Heading h1{
+    font-size: 0.5rem;
+  }
+}
+
+
+
+
+  
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: auto;
+}
+  
+.App-header img{
+  height: 48.5rem;
+}
+
+.nav-links .active {
+  color: rgba(165, 42, 42, 0.859) !important;
+}
+
+
+
+.nav-links a:hover{
+  text-decoration: underline;
+  text-underline-offset: 20px ;
+  text-decoration-color:  rgba(165, 42, 42, 0.859);
+  text-decoration-thickness: 2px;
+}
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+
+
+.cards-container {
+  background-color: #F8F9FA;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 300px;
+  padding-bottom: 300px;
+  gap: 50px;
+}
+
+.card-link {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.Articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  gap: 50px;
+
+}
+
+.Heading h1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  padding: 200px 0 200px 0;
+  text-decoration-line: underline;
+  text-underline-offset: 20px;
+  text-decoration-color: rgba(165, 42, 42, 0.711);
+  text-decoration-thickness: 10px;
+  line-height: 200%;
+  height: -10%;
+  font-size: 2.5rem;
+}
+
+.Titles h1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  padding: 200px 0 100px 0;
+  text-decoration-line: underline;
+  text-underline-offset: 20px;
+  text-decoration-color: rgba(165, 42, 42, 0.711);
+  text-decoration-thickness: 10px;
+  line-height: 200%;
+  height: -10%;
+  font-size: 2.5rem;
+}
+
+.contactCard {
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  height: 700px;
+  margin-top: 150px;
+}
+
+#formGridMessage1{
+  height: 300px;
+}
+.card-link{
+color: black;
+text-decoration: underline;
+text-underline-offset: 10px;
+text-decoration-thickness: 3.5px;
+text-decoration-color: rgba(165, 42, 42, 0.711);
+}
+
+.card-link:hover{
+  color: rgba(165, 42, 42, 0.828) ;
+}
+
+
+.bio-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+footer a{
+  color: #575757;
+  text-decoration: none;
+}
+footer a :hover{
+  color: #7c7a7a;
+  text-decoration-line: underline;
+}
+
+.Bio-Content{
+  padding-top: 50px;
+}
+
+.footer-container {
+  margin-top: 100px;
+  background-color: #F8F9FA;
+  padding: 50px 10px 50px 10px; 
+  
+}
+
+
