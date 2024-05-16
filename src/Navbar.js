@@ -39,7 +39,7 @@ const navigateToContact = () => {
           <Navbar.Toggle aria-controls="navbar-nav" style={{ border: 'none', hover: 'none'}} />
           <Navbar.Collapse id="responsive-navbar-nav" >
           <Nav className="nav-links me-auto" >
-            <Nav.Link onClick={navigateToHome} style={{ padding: '1.5rem'}} href="/" >Home</Nav.Link>
+            <Nav.Link onClick={navigateToHome} style={{ padding: '1.5rem'}} href='/Home' >Home</Nav.Link>
             <Nav.Link onClick={navigateToWork} style={{ padding: '1.5rem' }} active={location.pathname === '/Work' }>Artworks</Nav.Link>
             <Nav.Link onClick={navigateToBiography} style={{ padding: '1.5rem' }} active={location.pathname === '/Biography'}>Biography</Nav.Link> 
             <Nav.Link onClick={navigateToContact} style={{padding: '1.5rem'}} active={location.pathname === '/Contact'}> Contact </Nav.Link>
