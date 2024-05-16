@@ -24,7 +24,8 @@
   height: 48.5rem;
 }
 
-.active {
+
+a.active {
   color: rgba(165, 42, 42, 0.859) !important;
 }
 
