@@ -24,7 +24,7 @@
   height: 48.5rem;
 }
 
-.nav-links .active {
+.active {
   color: rgba(165, 42, 42, 0.859) !important;
 }
 

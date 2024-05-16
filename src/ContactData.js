@@ -1,5 +1,5 @@
 // install @emailjs/browser
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
@@ -42,12 +42,7 @@ const [submitError, setSubmitError] = useState("");
         setSubmitError('There was an error sending your message. Please try again later.');
     });
 
-// Clear the form fields after submission
-setEmail("");
-setMessage("");
-};
-
-
+    }
 
 return (
 <div className="container">
@@ -56,7 +51,7 @@ return (
                     <Card className='contactCard'>
                         <CardBody>
                             <h1 className="mb-5" style={{ textDecorationLine: 'underline', textDecorationColor: 'rgba(165, 42, 42, 0.711)', textDecorationThickness: '5px', lineHeight: '200%', height: '-10%', textUnderlineOffset: '20px' }}>Get in Touch</h1>
-
+                            {submitError && <div className='error'>{submitError}</div>}
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group className="mb-3" controlId="formGridEmail">
                                     <Form.Label>Email</Form.Label>
@@ -68,8 +63,8 @@ return (
                                     <Form.Control as="textarea" placeholder="Type message..." value={message} onChange={(e) => setMessage(e.target.value)} />
                                 </Form.Group>
 
-                                <Button variant="outline-dark" type="submit">
-                                    Submit
+                                <Button variant="outline-dark" type="submit" disabled={isSubmitting}>
+                                   {isSubmitting ? "Submitting..." : "Submit"}
                                 </Button>{' '}
                             </Form>
                         </CardBody>
