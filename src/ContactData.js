@@ -1,13 +1,14 @@
 // install @emailjs/browser
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import { Row, Col} from 'react-bootstrap';
-import { CardBody } from 'react-bootstrap';
+
 import emailjs from '@emailjs/browser';
 import './App.css';
 
+emailjs.init('qWPTejGney9-ihSxF');
 
 const ContactUs = () => {
 const [email, setEmail] = useState("");
@@ -15,17 +16,24 @@ const [message, setMessage] = useState("");
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitError, setSubmitError] = useState("");
 
+useEffect(() => {
+    emailjs.init('qWPTejGney9-ihSxF');
+}, []);
+
     const handleSubmit = (event) => {
       event.preventDefault();
       setIsSubmitting(true);
 
      const serviceID = 'service_2chtwnj';
-     const templateID = 'template_55517hh';
+     const templateID = 'template_1k5qo1i';
 
      const emailParams = {
-        from_email: email,
-        message: message
-     };
+        from_email: email, // Sender's email address
+        message: message,  // Message content
+        to_email: 'njabulonkosi59@gmail.com' // Your email address where you want to receive the emails
+      };
+  
+
 
      //Send the email using EmailJS
      emailjs.send(serviceID, templateID, emailParams)
@@ -49,7 +57,7 @@ return (
             <Row className="justify-content-center">
             <Col lg={12}  md={6}  sm={4} >
                     <Card className='contactCard'>
-                        <CardBody>
+                        <Card.Body>
                             <h1 className="mb-5" style={{ textDecorationLine: 'underline', textDecorationColor: 'rgba(165, 42, 42, 0.711)', textDecorationThickness: '5px', lineHeight: '200%', height: '-10%', textUnderlineOffset: '20px' }}>Get in Touch</h1>
                             {submitError && <div className='error'>{submitError}</div>}
                             <Form onSubmit={handleSubmit}>
@@ -67,7 +75,7 @@ return (
                                    {isSubmitting ? "Submitting..." : "Submit"}
                                 </Button>{' '}
                             </Form>
-                        </CardBody>
+                        </Card.Body>
                     </Card>
                     </Col>
     
